@@ -8,13 +8,15 @@
 
 **Team Member Contributions:**
 
-**Member 1**
 
-| **Details**                                                                                        | **Comment** |
-|:---------------------------------------------------------------------------------------------------|:------------|
-| **Student ID:**                                                                                    |             |
-| **Name:**                                                                                          |             |
-| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** |             |
+### Member 1: Data Collection and Data Quality
+
+| **Details** | **Comment** |
+|:---|:---|
+| **Student ID** | 170214 |
+| **Name** | Grace Chelangat |
+| **Personal Contribution and Learning** | I was responsible for **Member 1 – Data Collection and Data Quality**. I helped the group select Microsoft Corporation (MSFT) as the target stock, downloaded its historical stock data and the seven market predictor datasets using `download_data.py`, and configured the selected stock in `tslab/config.py`. I conducted data quality checks to identify missing values, duplicate dates, unusual price movements and gaps in the available data. I also generated and interpreted candlestick charts, examined trading volume, calculated daily and log returns, and analysed same-day and lagged correlations between MSFT returns and the market predictors. Through this task, I learned how to collect and prepare financial time-series data, assess data quality, interpret stock market movements and understand the importance of correctly timing predictors in forecasting to avoid look-ahead bias. |
+
 
 **Member 2**
 
