@@ -22,9 +22,9 @@
 
 | **Details**                                                                                        | **Comment** |
 |:---------------------------------------------------------------------------------------------------|:------------|
-| **Student ID:**                                                                                    |             |
-| **Name:**                                                                                          |             |
-| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** |             |
+| **Student ID:**                                                                                    |    168051         |
+| **Name:**                                                                                          |   Joy Mbote          |
+| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** |     I was responsible for Member 2’s section on stationarity and return analysis. Using the dataset prepared by Member 1, I analysed Microsoft Corporation’s (MSFT) closing prices and log returns, examining price movements over time and return behaviour. I applied the Augmented Dickey-Fuller (ADF) and KPSS tests to both series, interpreting the test statistics and p-values to assess stationarity. I also used ACF and PACF plots to examine autocorrelation and investigated volatility clustering in the returns.This work helped me understand how to test financial time series for stationarity, interpret ADF and KPSS results, identify autocorrelation patterns, and recognize volatility clustering. I also learned why forecasting returns is generally more suitable than forecasting stock prices directly, as prices often trend and are non-stationary.       |
 
 **Member 3**
 
