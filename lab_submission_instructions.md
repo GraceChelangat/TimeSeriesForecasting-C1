@@ -32,7 +32,7 @@
 |:---------------------------------------------------------------------------------------------------|:---------------|
 | **Student ID:**                                                                                    | 169302         |
 | **Name:**                                                                                          | Anastacia Muya |
-| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** |                |
+| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** | Implemented the naive benchmark and the classical forecasting models (simple exponential smoothing, ARIMA(2,1,0), ARMA and ARMAX with seven predictors) using expanding-window walk-forward validation. Evaluated them with RMSE, MAE, out-of-sample R² and directional accuracy, and used the Diebold-Mariano test to show that none of them significantly beats the naive forecast.               |
 
 **Member 4**
 
