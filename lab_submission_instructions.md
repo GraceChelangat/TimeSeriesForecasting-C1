@@ -38,10 +38,9 @@
 
 | **Details**                                                                                        | **Comment** |
 |:---------------------------------------------------------------------------------------------------|:------------|
-| **Student ID:**                                                                                    |             |
-| **Name:**                                                                                          |             |
-| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** |             |
-
+| **Student ID:**                                                                                    | 166567 |
+| **Name:**                                                                                          | Nicole Wachira |
+| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** | I was responsible for Member 4's section, Notebook 4.  I generated the modelling table of 47 predictors in six groups for MSFT, and studied what each group measures. I ran the look-ahead test (`check_no_lookahead`), which passed on the real features and caught a deliberately leaky feature. I trained Ridge regression and Gradient Boosting using expanding-window walk-forward validation (29 folds, 1,781 test days), with the scaler fitted on the training block only. I tuned the hyperparameters using only the first 1,000 days (Ridge alpha = 1000, Gradient Boosting max_depth = 2 and learning_rate = 0.01) and then froze them. I evaluated both models against the naive forecast with RMSE, MAE, out-of-sample R² and directional accuracy, and tested them with the Diebold-Mariano test. Neither model significantly beat the naive forecast (DM p-values 0.20 and 0.46), which is an honest negative result. I saved the predictions and metrics to the `outputs` folder for Members 5 and 6. I also answered the Step 14 exercises that relate to my part (Exercises 1, 2, 5, 6 and 7) in a markdown cell at the end of the notebook. I learned how look-ahead bias can fake a good result (R² jumped from about -0.06 to 0.79 with a leaky feature), why tuning must happen before the test period, and why a model must be compared with the naive forecast before it is trusted. |
 **Member 5**
 
 | **Details**                                                                                        | **Comment** |

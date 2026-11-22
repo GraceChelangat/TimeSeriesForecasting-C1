@@ -1,0 +1,3 @@
+Model,DM statistic vs naive,DM p-value,Verdict,Hit rate,Hit rate p-value (vs 50%)
+Ridge,1.2797,0.2008,No significant difference,0.5065,0.6022
+Gradient boosting,0.733,0.4637,No significant difference,0.5199,0.0972
