@@ -28,11 +28,11 @@
 
 **Member 3**
 
-| **Details**                                                                                        | **Comment** |
-|:---------------------------------------------------------------------------------------------------|:------------|
-| **Student ID:**                                                                                    |             |
-| **Name:**                                                                                          |             |
-| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** |             |
+| **Details**                                                                                        | **Comment**    |
+|:---------------------------------------------------------------------------------------------------|:---------------|
+| **Student ID:**                                                                                    | 169302         |
+| **Name:**                                                                                          | Anastacia Muya |
+| **What part of the lab did you personally contribute to,** <br>**and what did you learn from it?** |                |
 
 **Member 4**
 
