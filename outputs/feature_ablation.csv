@@ -1,0 +1,13 @@
+Model,Group,Features in group,R2 using ONLY this group,R2 WITHOUT this group,R2 change when removed,DM stat (without vs all),DM p-value (without vs all),Removing it is significant?
+Ridge,returns,9,-0.004668,-0.010231,0.00641,-1.836953,0.066383,No
+Ridge,volatility,6,0.002236,-0.017028,-0.000387,0.114418,0.908919,No
+Ridge,technical,9,-0.006989,-0.006273,0.010368,-2.593907,0.009567,Yes
+Ridge,volume,1,0.001353,-0.016415,0.000226,-0.745312,0.456181,No
+Ridge,other_markets,15,0.002779,-0.01811,-0.001468,0.337674,0.735649,No
+Ridge,calendar,7,0.000191,-0.014824,0.001818,-1.388128,0.165272,No
+Gradient boosting,returns,9,-0.015099,-0.007248,-0.00012,0.045809,0.963468,No
+Gradient boosting,volatility,6,-0.001121,-0.008174,-0.001046,0.349395,0.726834,No
+Gradient boosting,technical,9,-0.006669,-0.00639,0.000738,-0.126686,0.899203,No
+Gradient boosting,volume,1,-0.004593,-0.00723,-0.000102,0.193654,0.846469,No
+Gradient boosting,other_markets,15,-0.006955,-0.009354,-0.002226,0.454231,0.649718,No
+Gradient boosting,calendar,7,-0.00028,-0.007157,-3e-05,0.224931,0.822059,No

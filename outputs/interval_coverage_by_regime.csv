@@ -1,0 +1,4 @@
+volatility_regime,days,coverage,below_q10,above_q90,avg_width_pct
+Calm,594,0.777778,0.111111,0.111111,2.936653
+Normal,593,0.748735,0.099494,0.151771,3.696683
+Stormy,594,0.749158,0.131313,0.119529,4.664294
