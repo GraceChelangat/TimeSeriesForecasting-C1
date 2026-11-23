@@ -1,0 +1,2 @@
+Days scored,Coverage (inside q10 to q90),Target coverage,Share below q10 (target 0.10),Share above q90 (target 0.10),Binomial test p-value (coverage = 80%?),"95% CI of coverage, low","95% CI of coverage, high",Average interval width (% of price),Average interval width ($)
+1781.0,0.758563,0.8,0.113981,0.127456,2e-05,0.73799,0.77828,3.765916,11.830303
