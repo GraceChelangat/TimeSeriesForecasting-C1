@@ -1,0 +1,5 @@
+Horizon (trading days),Test rows,RMSE of the model ($),RMSE of the naive forecast ($),Out-of-sample R2 (returns),Directional accuracy,Share inside the 10%-90% range,Average width of the range (% of price)
+1,1781.0,5.886,5.7884,-0.025,0.5109,0.7754,3.8798
+5,1773.0,12.8287,12.6368,-0.0276,0.5336,0.7225,7.5046
+21,1741.0,26.4051,25.4982,-0.0357,0.5566,0.6347,13.1387
+63,1657.0,50.8935,45.5259,-0.1098,0.6343,0.5504,20.2931

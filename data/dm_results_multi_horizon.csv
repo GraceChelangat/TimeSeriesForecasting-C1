@@ -1,0 +1,5 @@
+Horizon (trading days),DM statistic (model vs naive),p-value,Better forecast,Verdict
+1,2.428,0.0153,Naive,Significantly WORSE than naive
+5,1.332,0.1829,Naive,No significant difference
+21,0.931,0.3518,Naive,No significant difference
+63,1.334,0.1823,Naive,No significant difference
