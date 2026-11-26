@@ -1,0 +1,11 @@
+Model,Cost per trade (bp),Share of days long,Annual return,Annual volatility,Sharpe ratio
+Ridge,0,0.608,0.109,0.299,0.364
+Ridge,5,0.608,0.013,0.3,0.045
+Ridge,10,0.608,-0.082,0.3,-0.273
+Gradient boosting,0,0.855,0.185,0.299,0.619
+Gradient boosting,5,0.855,0.141,0.299,0.472
+Gradient boosting,10,0.855,0.098,0.3,0.326
+"ARMAX(1,0), 7 predictors",0,0.657,0.311,0.299,1.041
+"ARMAX(1,0), 7 predictors",5,0.657,0.196,0.299,0.654
+"ARMAX(1,0), 7 predictors",10,0.657,0.08,0.299,0.268
+Buy and hold,0,1.0,0.206,0.299,0.687
