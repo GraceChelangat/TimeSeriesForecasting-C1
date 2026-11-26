@@ -1,0 +1,5 @@
+Model,DM statistic vs naive,DM p-value,Verdict,Hit rate,Hit rate p-value (vs 50%)
+GRU w20 u64 d0 seed42,3.8731,0.0001,Significantly WORSE than naive,0.5065,0.6022
+GRU w20 u64 d0 seed43,3.9219,0.0001,Significantly WORSE than naive,0.4935,0.6022
+GRU w20 u64 d0 seed44,2.8822,0.004,Significantly WORSE than naive,0.4952,0.7046
+GRU w20 u64 d0 3-seed average,2.1436,0.0322,Significantly WORSE than naive,0.4907,0.4483
