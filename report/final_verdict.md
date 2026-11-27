@@ -23,7 +23,7 @@
 ## What we did
 
 - **Stock and data.** MSFT daily data from 2 January 2015 to 9 November 2026 (2,981 trading days), with seven market predictors: the S&P 500, a technology fund, the VIX, the 10-year US yield, the US dollar, Brent crude and gold. Data download date: 17 November 2026 (stated in Member 1's notebook).
-- **Method.** We forecast the next-day *return* and converted it to a price. Expanding-window walk-forward validation: 29 folds, **1,781 test days** (8 October 2019 to 6 November 2026), fixed random seed 42. The look-ahead test (`check_no_lookahead`) passed on all 47 machine-learning features and caught a deliberately leaky feature, which shows the test works. The 7 ARMAX predictors are shifted by one day in Notebook 3, so each forecast uses only information known at the previous close; we did not run `check_no_lookahead` on them separately..
+- **Method.** We forecast the next-day *return* and converted it to a price. Expanding-window walk-forward validation: 29 folds, **1,781 test days** (8 October 2019 to 6 November 2026), fixed random seed 42. The look-ahead test (`check_no_lookahead`) passed on all 47 machine-learning features and caught a deliberately leaky feature, which shows the test works. The 7 ARMAX predictors are shifted by one day in Notebook 3, so each forecast uses only information known at the previous close; we did not run `check_no_lookahead` on them separately.
 - **Models.** Naive; classical models (drift, moving average, exponential smoothing, ARIMA, ARMA, ARMAX, SARIMA); Ridge regression and Gradient Boosting with 47 predictors; a GRU neural network.
 
 ## One day ahead: all models on the same test days
