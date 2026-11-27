@@ -4,7 +4,7 @@
 
 ## Verdict
 
-**No. None of our models beat the naive forecast, and the neural network is significantly worse.** The naive forecast (tomorrow equals today) has the lowest error on 1,781 test days: an RMSE of $5.79, against $5.82 for the best model (ARMAX with seven predictors), $5.83 for Gradient Boosting, $5.87 for the GRU neural network (average of three seeds) and $5.88 for Ridge regression.
+**No. None of our models beat the naive forecast, and the neural network is significantly worse.** The naive forecast (tomorrow equals today) has the lowest error on 1,781 test days: an RMSE of $5.79, against $5.79 for drift, $5.80 for exponential smoothing, $5.82 for ARMAX with seven predictors, $5.83 for Gradient Boosting, $5.87 for the GRU neural network (average of three seeds) and $5.88 for Ridge regression.
 
 **How we know.** We tested every model with walk-forward validation: each model was trained only on days before the block it was tested on, scalers were fitted on the training block only, and settings were tuned on the first 1,000 days before the test period. A Diebold-Mariano test asks whether a gap in error is bigger than luck. For ARMAX, Gradient Boosting and Ridge it is not (p = 0.41, 0.46 and 0.20), so we cannot say they are better *or* worse than naive. For the GRU it is: the network is worse than naive with all three seeds (p between 0.0001 and 0.004) and on average (p = 0.032). The seeds differ very little from each other, so this is not bad luck with the random start. The hit rates of Ridge, Gradient Boosting and the GRU (49% to 52%) are indistinguishable from a coin toss; ARMAX's 52.8% is the highest, but it did not lead to a lower error.
 
@@ -37,9 +37,9 @@
 | Ridge | 5.88 | 4.07 | 50.7% | 0.20 | No significant difference |
 | GRU, single seeds (42, 43, 44) | 5.94 / 5.98 / 5.98 | 4.16 / 4.22 / 4.20 | 50.6% / 49.4% / 49.5% | 0.0001 / 0.0001 / 0.004 | Significantly worse |
 
-`[CONFIRM: test ARMAX's hit rate against 50% the same way as the other models; it is the only one that may stand out.]`
+ARMAX's 52.8% hit rate differs from 50% (p = 0.018), but MSFT rose on about 52.9% of the days, so a rule that always says "up" scores the same: ARMAX's accuracy is the base rate, not skill. With seven models tested, one p-value near 0.02 is also expected by chance.
 
-Out-of-sample R² (on returns): ARMAX 0.011, Gradient Boosting -0.007, Ridge -0.017, GRU average -0.028. Only ARMAX is above zero, by a margin that is far inside the noise. `[CONFIRM: add the other classical models' rows from Member 3's table]`
+Out-of-sample R² (on returns): exponential smoothing 0.014, ARMAX 0.011, drift 0.001, ARMA 0.001, SARIMA -0.003, Gradient Boosting -0.007, ARIMA -0.008, Ridge -0.017, GRU average -0.028. The few positive values are far inside the noise. Other classical models (RMSE in dollars, Diebold-Mariano p-value against naive): drift 5.79 (0.62), exponential smoothing 5.80 (0.28), ARMA(1,0) own past only 5.84 (0.93), ARIMA(2,1,0) 5.84 (0.40), SARIMA(1,0,0)(1,0,0,5) 5.84 (0.74). None is significantly different from naive, except the 20-day moving average, which is significantly worse (RMSE 14.89).
 
 ## The neural network
 
@@ -62,12 +62,11 @@ This is not a trading recommendation. The ARMAX edge is statistically weak (p = 
 
 ## Which predictors helped?
 
-In the feature-group ablation, the market-wide group and the volatility group were the only ones that helped slightly; removing the technical indicators or the past returns made Ridge marginally better. All differences are below about 0.01 in R², so they are hints, not findings. `[CONFIRM: align with Member 5's own interpretation]`
+In the feature-group ablation (Member 5), four groups score slightly above zero on their own with Ridge: other markets (+0.0028), volatility (+0.0022), volume (+0.0014) and calendar (+0.0002), but these are tiny and not findings. The one significant result is that removing the nine technical indicators raises Ridge's R² by 0.0104 (p = 0.0096): they added noise, not signal. Even without them, Ridge's R² is still negative (-0.0063), so it does not beat the naive forecast. For Gradient Boosting, no group makes a meaningful difference (every change is below 0.0025 and every p-value is above 0.6). The two models rank the groups similarly (Spearman correlation 0.83), but with only six groups this is a hint, not a proof.
 
 ## How uncertain is it? Longer horizons
 
-A 10% to 90% range from quantile regression should contain about 80% of outcomes. For one day it contained 75.9% in our test, so it is too narrow `(confirmed by Member 5's coverage summary: 75.9%, 95% CI 73.8% to 77.8%, significantly below 80%)`.
-
+A 10% to 90% range from quantile regression should contain about 80% of outcomes. For one day it contained 75.9% in our test (95% interval about 74% to 78%, significantly below 80%, Member 5), so it is too narrow. Coverage was worst in 2020 (70.0%), and in the COVID crash of March 2020 the rolling 63-day coverage fell to about 42%, so the range is least reliable exactly when risk is highest.
 | Horizon | Model RMSE ($) | Naive RMSE ($) | Out-of-sample R² | Outcomes inside the range | Average range width |
 |---|---|---|---|---|---|
 | 1 day | 5.89 | 5.79 | -0.025 | 77.5% | 3.9% of price |
