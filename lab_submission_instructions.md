@@ -187,7 +187,7 @@ For all three tiers, submit the link to a short video (not more than 4 minutes) 
 
 | **Key**                | **Value** |
 |:-----------------------|:----------|
-| **Link to the video:** |           |
+| **Link to the video:** |     https://drive.google.com/drive/folders/16PS9sVLydYUYPR_rX7m6fgNHcjsYf_Il?usp=drive_link      |
 
 ---
 
